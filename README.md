@@ -2,13 +2,13 @@
 
 **Zadanie 1:** Clean Code
 
-Klasa `pl.zzpj.cleancode.doIt` nie przestrzega zasad Clean Code. Przerefaktoruj kod zgodnie z zasadami poznanymi podczas wykładu.
+Klasa `pl.zzpj.cleancode.doIt` nie przestrzega zasad Clean Code. Przerefaktoruj kod zgodnie z zasadami poznanymi podczas prezentacji.
 
-Pytania uzupełniające:
+Pytania pomocnicze:
 - Jaka jest rola tej klasy? 
 - Jaką funkcjonalność realizuje?
-- Jaki jest najlepszy sposób na sprawdzenie poprawności implementacji kolejnych metod tej klasy? Upewnij się czy wszystkie metody są 
-zaimplementowane poprawnie.
+- Jaki jest najlepszy sposób na sprawdzenie poprawności implementacji kolejnych metod tej klasy? 
+- Czy wszystkie metody są zaimplementowane poprawnie?
 ---
 
 **Zadanie 2:** Single Responsibility Principle
