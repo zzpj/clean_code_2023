@@ -2,7 +2,7 @@ package pl.zzpj.examples;
 
 public final class IfElseBlocksRemover {
 
-    public String getValueExpression(Object value) {
+    public String getValueType(Object value) {
 
         final String newExpression;
         if (value instanceof String) {
