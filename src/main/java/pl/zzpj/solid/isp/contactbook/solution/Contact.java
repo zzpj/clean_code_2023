@@ -1,9 +1,6 @@
-package pl.zzpj.solid.isp.contactbook.violation;
+package pl.zzpj.solid.isp.contactbook.solution;
 
-import pl.zzpj.solid.isp.contactbook.solution.DiallerContact;
-import pl.zzpj.solid.isp.contactbook.solution.EmailContact;
-
-class Contact implements EmailContact, DiallerContact {
+class Contact {
 	public String name;
 	public String address;
 	public String emailAddress;
