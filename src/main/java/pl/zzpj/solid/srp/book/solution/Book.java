@@ -1,54 +1,66 @@
 package pl.zzpj.solid.srp.book.solution;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Book {
 
     private int currentPage = 0;
-    private final String title;
-    private final String author;
-    private final List<String> bookContent;
-    private final int wordsLimitAtPage;
+    private final Map<Integer, String> pages = new HashMap<>();
+    private final String libraryRoomName;
+    private final String rowLocator;
+    private final int indexOnShelf;
 
-    public Book(String title, String author, int wordsLimitAtPage, String bookContent) {
-        this.title = title;
-        this.author = author;
-        this.wordsLimitAtPage = wordsLimitAtPage;
-        this.bookContent = divideContentIntoPages(bookContent);
+    public Book(String libraryRoomName, String rowLocator, int indexOnShelf) {
+        this.libraryRoomName = libraryRoomName;
+        this.rowLocator = rowLocator;
+        this.indexOnShelf = indexOnShelf;
     }
 
-    public List<String> divideContentIntoPages(String bookContent) {
-        List<String> pagedContent = new ArrayList<>();
-        List<String> wordsList = List.of(bookContent.split(" "));
-
-        for (int i = 0; i < wordsList.size(); i += wordsLimitAtPage) {
-            List<String> wordsOnPage = wordsList.subList(i, Math.min(i + wordsLimitAtPage, wordsList.size()));
-            String line = String.join(" ", wordsOnPage);
-            pagedContent.add(line);
-        }
-
-        return pagedContent;
+    public Map<Integer, String> getPages() {
+        return pages;
     }
 
-    public void goToPage(int page) {
-        if (page < bookContent.size())
-            currentPage = page - 1;
-    }
-
-    public String getPageContent() {
-        return bookContent.get(currentPage);
-    }
-
-    public List<String> getBookContent() {
-        return bookContent;
+    public void turnPage() {
+        currentPage ++;
     }
 
     public String getTitle() {
-        return title;
+        return "A Great Book";
     }
 
     public String getAuthor() {
-        return author;
+        return "John Doe";
+    }
+
+    public String getCurrentPageContents() {
+        return pages.get(currentPage);
+    }
+
+    /**
+     * Gives the library name
+     *
+     * @return
+     */
+    public String libraryRoomName() {
+        return libraryRoomName;
+    }
+
+    /**
+     * Gives the row location of the book.
+     * @return
+     */
+    public String getLocationRowLocator() {
+        return rowLocator;
+    }
+
+    /**
+     * Gives the number from shelf.
+     * @return
+     */
+    public int getIndexOnShelf() {
+        return indexOnShelf;
     }
 }

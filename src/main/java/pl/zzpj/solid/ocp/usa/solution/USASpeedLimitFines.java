@@ -3,11 +3,11 @@ package pl.zzpj.solid.ocp.usa.solution;
 import java.util.ArrayList;
 import java.util.List;
 
-public class USASpeedLimits {
+public class USASpeedLimitFines {
     private List<State> states = new ArrayList<>();
 
-    public USASpeedLimits() {}
-    public USASpeedLimits(List<State> states) {
+    public USASpeedLimitFines() {}
+    public USASpeedLimitFines(List<State> states) {
         this.states = states;
     }
 
